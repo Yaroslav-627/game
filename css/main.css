@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 220px;
+    height: 1vh;
+    margin: 0 auto;
+}
+.score{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 34px;
+    margin: 15px 0;
+}
+.img{
+    width: 100%;
+    height: 220px;
+}
+.your__choice-wrapper{
+    width: 100%;
+    height: 60px;
+    margin-top: 15px;
+}
+.img__choices{
+    width: 60px;
+    height: 100%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.img__choices:last-child{
+    margin: 0;
+}
