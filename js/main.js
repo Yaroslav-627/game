@@ -11,7 +11,7 @@ let imgChoices = document.querySelector(".img__choices");
 function opponentChoice() {
     let choice = Math.floor(Math.random() * 2.9);
     console.log(choice);
-    img__opponent.src = "js/" + choices[choice] + ".png";
+    img__opponent.src = "img/" + choices[choice] + ".png";
 }
 function yourChoice() {
     your__img.src = img__opponent.src;
