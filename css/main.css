@@ -4,30 +4,39 @@
     box-sizing: border-box;
 }
 .wrapper{
-    width: 220px;
-    height: 1vh;
-    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 15px;
+}
+.your__and__oponent{
+    display: flex;
+    justify-content: space-evenly;
 }
 .score{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 34px;
+    font-size: 20px;
     margin: 15px 0;
 }
 .img{
-    width: 100%;
+    width: 220px;
     height: 220px;
 }
 .your__choice-wrapper{
     width: 100%;
-    height: 60px;
+    max-height: 72px;
     margin-top: 15px;
+    text-align: center;
 }
 .img__choices{
-    width: 60px;
+    max-width: 72px;
     height: 100%;
     margin-right: 15px;
     cursor: pointer;
+    transition: 0.3s;
+}
+.img__choices:hover{
+    transform: scale(1.3);
 }
 .img__choices:last-child{
     margin: 0;

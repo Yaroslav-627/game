@@ -9,19 +9,21 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="opponent__wrapper">
-            <h2 class="score opponent__score">0</h2>
-            <img src="" class="img opponent__img">
-        </div>
-        <div class="your__wrapper">
-            <img src="" alt="" class="img your__img">
-            <div class="your__choice-wrapper">
-                <img class="img__choices" src="img/rock.png" alt="rock">
-                <img class="img__choices" src="img/scissors.png" alt="scissors">
-                <img class="img__choices" src="img/paper.png" alt="paper">
+        <div class="your__and__oponent">
+            <div class="opponent__wrapper">
+                <img src="" class="img opponent__img">
+                <h2 class="score opponent__score">Computer Score: 0;</h2>
             </div>
-            <h2 class="score your__score">0</h2>
+            <div class="your__wrapper">
+                <img src="" alt="" class="img your__img">
+                <h2 class="score your__score">Your score: 0;</h2>
+            </div>
         </div>
+    <div class="your__choice-wrapper">
+        <img class="img__choices" data-choices="scissors" src="img/scissors.png" alt="scissors">
+        <img class="img__choices" data-choices="rock" src="img/rock.png" alt="rock">
+        <img class="img__choices" data-choices="paper" src="img/paper.png" alt="paper">
+    </div>
     </div>
 
     <script src="js/main.js"></script>

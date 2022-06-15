@@ -6,16 +6,21 @@ let choices = ["scissors", "rock", "paper"];
 
 let img__opponent = document.querySelector(".opponent__img");
 let your__img = document.querySelector(".your__img");
-let imgChoices = document.querySelector(".img__choices");
+let uChoices = document.querySelectorAll("[data-choices]");
 
 function opponentChoice() {
     let choice = Math.floor(Math.random() * 2.9);
     console.log(choice);
     img__opponent.src = "img/" + choices[choice] + ".png";
 }
-function yourChoice() {
-    your__img.src = img__opponent.src;
+uChoices.forEach(uChoice => {
+    uChoice.addEventListener("click", e =>{
+        const select = uChoice.dataset.choices;
+        Selection(select);
+    })
+})
+function Selection(selection){
+    your__img.src = "img/" + selection + ".png";
+    opponentChoice();
 }
-
-opponentChoice();
-yourChoice()
+imgChoices.addEventListener("click", yourChoice);
