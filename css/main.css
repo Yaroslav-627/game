@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background: rgb(89, 104, 104);
+}
+body::-webkit-scrollbar {
+    display: none;
 }
 .wrapper{
     width: 100vw;
