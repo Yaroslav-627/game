@@ -10,12 +10,14 @@ let img__opponent = document.querySelector(".opponent__img");
 let your__img = document.querySelector(".your__img");
 let opponentText = document.querySelector(".opponent__score");
 let yourText = document.querySelector(".your__score");
+let listItem = document.querySelector(".list__item");
 let uChoices = document.querySelectorAll("[data-choices]");
 
-function opponentChoice(scr) {
+function opponentChoice(src) {
     let choice = Math.floor(Math.random() * 2.9);
     img__opponent.src = "img/" + choices[choice] + ".png";
-    Score(scr, choices[choice]);
+    Score(src, choices[choice]);
+    History(src, choices[choice]);
 }
 uChoices.forEach(uChoice => {
     uChoice.addEventListener("click", e =>{
@@ -39,6 +41,9 @@ function Score(your, oppo) {
         console.log(oppo, your);
         drawScore++;
     }
+}
+function History(you, pc) {
+    listItem.cloneNode(true)
 }
 function render(you) {
     // data.push({your_choices: you, PC_choices: your__img.src, who_won: your__img.src});

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@600&family=Gantari:ital,wght@0,600;1,600&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -33,7 +34,7 @@ body::-webkit-scrollbar {
 }
 .img__choices{
     max-width: 72px;
-    height: 100%;
+    max-height: 72px;
     margin-right: 15px;
     cursor: pointer;
     transition: 0.3s;
@@ -43,4 +44,36 @@ body::-webkit-scrollbar {
 }
 .img__choices:last-child{
     margin: 0;
+}
+.history{
+    margin-top: 25px;
+}
+.h__text{
+    text-align: center;
+}
+.h__text span{
+    font-size: 40px;
+    font-family: Gantari;    
+}
+.text{
+    text-align: center;
+    font-size: 25px;
+    font-family: Gantari;
+    font-style: italic;
+}
+.h__list{
+    display: flex;
+    justify-content: space-evenly;
+}
+.h__list-text{
+    max-width: 230px;
+}
+.list__choice{
+    margin: auto;
+    max-width: 72px;
+    max-height: 72px;
+}
+.list__item{
+    display: flex;
+    justify-content: center;
 }
