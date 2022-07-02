@@ -10,7 +10,6 @@ let img__opponent = document.querySelector(".opponent__img");
 let your__img = document.querySelector(".your__img");
 let opponentText = document.querySelector(".opponent__score");
 let yourText = document.querySelector(".your__score");
-let listItem = document.querySelector(".list__item");
 let uChoices = document.querySelectorAll("[data-choices]");
 
 function opponentChoice(src) {
@@ -43,7 +42,16 @@ function Score(your, oppo) {
     }
 }
 function History(you, pc) {
-    listItem.cloneNode(true)
+    let listItem__PC = document.querySelector(".Computer");
+    let listItem__You = document.querySelector(".You");
+    const PC = listItem__PC.cloneNode(true);
+    let You = listItem__You.cloneNode(true);
+    PC.removeAttribute("style");
+    You.removeAttribute("style");
+    PC.querySelector(".list__choice").src = "img/" + pc + ".png";
+    You.querySelector(".list__choice").src = "img/" + you + ".png";
+    document.querySelector(".pc").appendChild(PC);
+    document.querySelector(".you").appendChild(You);
 }
 function render(you) {
     // data.push({your_choices: you, PC_choices: your__img.src, who_won: your__img.src});

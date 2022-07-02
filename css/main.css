@@ -57,7 +57,7 @@ body::-webkit-scrollbar {
 }
 .text{
     text-align: center;
-    font-size: 25px;
+    font-size: 35px;
     font-family: Gantari;
     font-style: italic;
 }
@@ -73,7 +73,8 @@ body::-webkit-scrollbar {
     max-width: 72px;
     max-height: 72px;
 }
-.list__item{
+.item{
     display: flex;
     justify-content: center;
+    margin-top: 15px;
 }
