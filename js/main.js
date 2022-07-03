@@ -3,20 +3,19 @@ let opponent;
 let yourScore = 0;
 let opponentScore = 0;
 let drawScore = 0;
-let data = [];
 let choices = ["scissors", "rock", "paper"];
 
 let img__opponent = document.querySelector(".opponent__img");
 let your__img = document.querySelector(".your__img");
 let opponentText = document.querySelector(".opponent__score");
 let yourText = document.querySelector(".your__score");
+let drawText = document.querySelector(".draw__score");
 let uChoices = document.querySelectorAll("[data-choices]");
 
-function opponentChoice(src) {
+function opponentChoice(scr) {
     let choice = Math.floor(Math.random() * 2.9);
     img__opponent.src = "img/" + choices[choice] + ".png";
-    Score(src, choices[choice]);
-    History(src, choices[choice]);
+    Score(scr, choices[choice]);
 }
 uChoices.forEach(uChoice => {
     uChoice.addEventListener("click", e =>{
@@ -41,24 +40,9 @@ function Score(your, oppo) {
         drawScore++;
     }
 }
-function History(you, pc) {
-    let listItem__PC = document.querySelector(".Computer");
-    let listItem__You = document.querySelector(".You");
-    const PC = listItem__PC.cloneNode(true);
-    let You = listItem__You.cloneNode(true);
-    PC.removeAttribute("style");
-    You.removeAttribute("style");
-    PC.querySelector(".list__choice").src = "img/" + pc + ".png";
-    You.querySelector(".list__choice").src = "img/" + you + ".png";
-    document.querySelector(".pc").appendChild(PC);
-    document.querySelector(".you").appendChild(You);
-}
 function render(you) {
-    // data.push({your_choices: you, PC_choices: your__img.src, who_won: your__img.src});
-    // console.log(data);
-    // const stor = window.localStorage;
-    // stor.setItem("data", data);
     opponentText.innerText = "Computer Score: " + opponentScore + ";";
     yourText.innerText = "Your Score: " + yourScore + ";";
+    drawText.innerText = "Draw Score: " + drawScore + ";";
     console.log(drawScore + "; " + opponentScore, yourScore);
 }
