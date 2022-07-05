@@ -1,8 +1,7 @@
 :root {
-    --active-bg: rgba(220,234,249,255);
-    --bg: rgba(246,247,249,255);
+    --active-bg: #7f7e7e;
+    --bg: #b2b2b2;
     --round-color: white;
-
 }
 .checkbox_i{
     display: none;
@@ -10,50 +9,44 @@
 .sw{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.switch {
-    /* position: absolute;
-    top: 10px;
-    right: 10px */
-    
+.eng{
+    margin-right: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
+.ua{
+    margin-left: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 .checkbox_i:checked ~ .switch_round {
     margin-left: 45px;
-    background-image: url("./img/Ukraine.webp");
 }
-
 .checkbox_i:checked ~ .switch_bg {
     background-color: var(--active-bg);
 }
-
 .switch {
     display: block;
     padding: 3px;
     width: 85px;
     height: 40px;
     border-radius: 20px;
-    /* border: 1px solid black; */
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
 }
-
 .switch_round {
     display: block;
     height: 34px;
     width: 34px;
     background-color: var(--round-color);
     border-radius: 50%;
-    /* border: 1px solid red; */
     box-sizing: border-box;
     transition: margin 0.3s;
-    background-image: url("./img/UK.png");
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position: center;
 }
-
 .switch_bg {
     background-color: var(--bg);
     height: 40px;
